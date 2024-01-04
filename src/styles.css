@@ -1,0 +1,366 @@
+@media screen and (max-width: 600px) {
+  .leftcolumn,
+  .rightcolumn {
+    width: 100%; /* Make both columns take up 100% of the width */
+  }
+}
+
+/* Media query for screens smaller than 400 pixels */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none; /* Make navigation links stack on top of each other */
+    width: 100%;
+  }
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background: linear-gradient(
+    179.1deg,
+    rgb(247, 238, 238) -1.9%,
+    rgb(247, 202, 201) 44.9%,
+    rgb(145, 168, 208) 96.1%
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+  float: left;
+  width: 75%;
+  border-radius: 10px !important;
+  padding: 10px 20px;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+}
+#sleftcolumn {
+  float: left;
+  width: 75%;
+}
+#result {
+  border-radius: 10px !important;
+  padding: 10px 20px;
+  animation: floatAnimation 2s infinite;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.3);
+}
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px !important;
+  padding-left: 20px;
+}
+.conclusion,
+.subone,
+.subtwo,
+.subthree,
+.subfour {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px !important;
+  padding-left: 20px;
+}
+.scard {
+  display: none;
+}
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 10px;
+  text-align: center;
+  background: #95a9d3;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn,
+  .rightcolumn {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+h1 {
+  font-family: CinzelDecorative;
+  color: #000000;
+  text-align: center;
+  background: #fffffff9;
+}
+
+a {
+  font-family: "Bodoni Moda", serif;
+  font-size: x-large;
+  color: #eff0f0;
+  text-decoration: none;
+}
+
+.menu {
+  align-items: center;
+  position: relative;
+  background: #ffffff;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  padding: 10px;
+  box-shadow: rgba(37, 39, 89, 0.08) 0px 10px 10px 0px;
+}
+.Sneakerness {
+  transition: background-color 0.3s ease-in-out;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #000000;
+}
+.Home {
+  transition: background-color 0.3s ease-in-out;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #000000;
+}
+.sub {
+  position: relative;
+  transition: background-color 0.3s ease-in-out;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #000000;
+}
+.Contact {
+  position: relative;
+  transition: background-color 0.3s ease-in-out;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #000000;
+}
+
+.Sneakerness:hover {
+  display: block;
+  color: #ffffff;
+  background-color: #efddde;
+}
+.sub:hover + .popupMenu {
+  display: block;
+}
+.sub:hover {
+  color: #ffffff;
+  background-color: #efddde;
+}
+.Contact:hover {
+  color: #ffffff;
+  background-color: #efddde;
+}
+.Home:hover {
+  display: block;
+  color: #ffffff;
+  background-color: #efddde;
+}
+.Contact:hover + .popupMenuTwo {
+  display: block;
+}
+
+#popupMenu {
+  display: none;
+  position: absolute;
+  top: 100%; /* Position below the menu button */
+  right: 485px; /* Align with the left edge of the menu button */
+  background-color: #ffffff;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  min-width: 150px;
+  transition: background-color 0.3s ease-in-out;
+  border-radius: 10px;
+  color: #dfd3d3;
+}
+
+#popupMenu a {
+  top: 100%; /* Position below the menu button */
+  right: 485px;
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #000000;
+  transition: background-color 0.3s;
+  @media (max-width: 767px) {
+    right: 0; /* Adjust the right positioning for smaller screens */
+    min-width: 100%; /* Make the menu full width */
+  }
+}
+
+#popupMenu a:hover {
+  color: #ffffff;
+  background-color: #efddde;
+}
+#popupMenu a:first-child {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+#popupMenu a:last-child {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+#popupMenuTwo {
+  display: none;
+  position: absolute;
+  top: 100%; /* Position below the menu button */
+  right: 170px; /* Align with the left edge of the menu button */
+  background-color: #ffffff;
+  transition: background-color 0.3s ease-in-out;
+  border-radius: 10px;
+  color: #dfd3d3;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  min-width: 150px; /* Adjust as needed */
+  @media (max-width: 767px) {
+    right: 0; /* Adjust the right positioning for smaller screens */
+    min-width: 100%; /* Make the menu full width */
+  }
+}
+
+#popupMenuTwo a {
+  display: block;
+  padding: 10px 20px;
+  font-family: "Bodoni Moda", serif;
+  color: #000000;
+
+  transition: background-color 0.3s;
+}
+@media screen and (max-width: 768px) {
+  .popupMenu {
+    width: 100%; /* Adjust width for smaller screens */
+    left: 0; /* Center the popup under the button */
+  }
+}
+@media screen and (max-width: 768px) {
+  .popupMenuTwo {
+    width: 100%; /* Adjust width for smaller screens */
+    left: 0; /* Center the popup under the button */
+  }
+}
+
+#popupMenuTwo a:hover {
+  color: #ffffff;
+  background-color: #efddde;
+}
+#popupMenuTwo a:first-child {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+#popupMenuTwo a:last-child {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.sneakerOne {
+  width: fit-content;
+}
+#survey-disabled {
+  display: none;
+}
+#survey-disabled .image-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: repeat(4, 1fr); /* Adjust the number of rows as needed */
+  grid-gap: 20px;
+}
+
+#survey-disabled img {
+  display: block;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: auto; /* Center the images horizontally */
+  max-width: 100%; /* Ensure images don't exceed their container */
+  max-height: 100%; /* Ensure images don't exceed their container */
+  animation: floatAnimation 2s infinite;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+#first {
+  animation: floatAnimation 2s infinite;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.3);
+}
+#second {
+  animation: floatAnimation 2s infinite;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.3);
+}
+#third {
+  animation: floatAnimation 2s infinite;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.3);
+}
+#fourth {
+  animation: floatAnimation 2s infinite;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.3);
+}
+#fifth {
+  animation: floatAnimation 2s infinite;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(0);
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.3);
+  }
+  50% {
+    transform: translateY(-10px);
+    box-shadow: 0px 30px 60px rgba(0, 0, 0, 0.5);
+  }
+  100% {
+    transform: translateY(0);
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.3);
+  }
+}
+
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-20px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+}
