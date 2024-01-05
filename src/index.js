@@ -107,19 +107,19 @@ const myButton = document.getElementById("omo");
 // Add a click event listener to the button
 myButton.addEventListener("click", function () {
   // Show an alert when the button is clicked
-  alert("Email me! omolade249ahmed@gmail.com");
+  alert("Email:omolade249ahmed@gmail.com");
 });
 const myButtonSec = document.getElementById("reb");
 
 // Add a click event listener to the button
 myButtonSec.addEventListener("click", function () {
   // Show an alert when the button is clicked
-  alert("Button clicked!");
+  alert("Email:r.ollivieira@berlagelyceum.eu" );
 });
 const myButtonThird = document.getElementById("school");
 
 // Add a click event listener to the button
 myButtonThird.addEventListener("click", function () {
   // Show an alert when the button is clicked
-  alert("Call the school with this number +020 572 1200");
+  alert("Call the school with this number: +020 572 1200");
 });
