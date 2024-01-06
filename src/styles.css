@@ -13,7 +13,6 @@
   }
 }
 
-
 * {
   padding: 0;
   margin: 0;
@@ -186,6 +185,7 @@ a {
   color: #ffffff;
   background-color: #efddde;
 }
+
 .Home:hover {
   display: block;
   color: #ffffff;
@@ -193,20 +193,6 @@ a {
 }
 .Contact:hover + .popupMenuTwo {
   display: block;
-}
-
-#popupMenu {
-  display: none;
-  position: absolute;
-  top: 100%; /* Position below the menu button */
-  right: 485px; /* Align with the left edge of the menu button */
-  background-color: #ffffff;
-  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  min-width: 150px;
-  transition: background-color 0.3s ease-in-out;
-  border-radius: 10px;
-  color: #dfd3d3;
 }
 
 #popupMenu a {
@@ -239,8 +225,9 @@ a {
 #popupMenuTwo {
   display: none;
   position: absolute;
-  top: 100%; /* Position below the menu button */
-  right: 170px; /* Align with the left edge of the menu button */
+  top: 100%;
+  right: 130px;
+  margin-top: 5px;
   background-color: #ffffff;
   transition: background-color 0.3s ease-in-out;
   border-radius: 10px;
